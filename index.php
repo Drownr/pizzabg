@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title> Pizzerie Bergamo </title>
+		<link href="stile.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<?php
@@ -13,31 +14,38 @@
 			$risposta = curl_exec($curl) or die(curl_error());
 			$rispostaDec = json_decode($risposta);
 		?>
-		
-		<p align='center'> Pizzerie vicine a Bergamo </p> <br>
 		<div align='center'>
-			<table align='center' style='border:3px solid black;'>
-				<tr>
-					<th> NOME </th>
-					<th> LATITUDINE</th>
-					<th> LONGITUDINE</th>
-				</tr>
+			
+			<div class="table-title">
+				<h3> Pizzerie vicine a Bergamo </h3>
+			</div>
+			
+			<table class="table-fill">
+				<thead>
+					<tr>
+						<th class="text-left">Nome</th>
+						<th class="text-left">Latitudine</th>
+						<th class="text-left">Longitudine</th>
+					</tr>
+				</thead>
+				<tbody class="table-hover">
 				<?php
 					for($i=0; $i < 10; $i++)
 					{
 				?>
 						<tr>
-							<td/>
+							<td class="text-left">
 								<?php echo ($rispostaDec->response->venues[$i]->name); ?>
 							</td>
-							<td/>
+							<td class="text-left">
 								<?php echo ($rispostaDec->response->venues[$i]->location->lat); ?>
 							</td>
-							<td>
+							<td class="text-left">
 								<?php echo ($rispostaDec->response->venues[$i]->location->lng); ?>
 							</td>
 						</tr>
 				<?php } ?>
+				</tbody>
 			</table>
 		</div>
 	</body>
