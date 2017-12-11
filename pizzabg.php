@@ -26,13 +26,13 @@
 				?>
 						<tr>
 							<td style='border: 1px solid black;'/>
-								<?php echo ($risposta->response->venues[$i]->name); ?>
+								<?php echo ($rispostaDec->response->venues[$i]->name); ?>
 							</td>
 							<td style='border: 1px solid black;'/>
-								<?php echo ($risposta->response->venues[$i]->location->lat); ?>
+								<?php echo ($rispostaDec->response->venues[$i]->location->lat); ?>
 							</td>
 							<td style='border: 1px solid black;'>
-								<?php echo ($risposta->response->venues[$i]->location->lng); ?>
+								<?php echo ($rispostaDec->response->venues[$i]->location->lng); ?>
 							</td>
 						</tr>
 				<?php } ?>
