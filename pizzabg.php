@@ -21,7 +21,7 @@
 					<th style='border: 2px solid black; background-color: #FF0000;color: white;'> LONGITUDINE</th>
 				</tr>
 				<?php
-					for($i=0; $i<$nelementi; $i++)
+					for($i=0; $i < 10; $i++)
 					{
 				?>
 						<tr>
