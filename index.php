@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="it">
 	<head>
 		<title>Ricerca</title>
 		<script>
